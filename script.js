@@ -13,9 +13,9 @@ botao.addEventListener('click', () => {
 
     const valorInput = input.value
 
-    for (let i = 0; i < contacts.length; i++) {
-        if (valorInput.toLowerCase() === contacts[i].name.toLowerCase()) {
-            p.innerHTML = `Contato Encontrado Nome: ${contacts[i].name} Tel: ${contacts[i].number}`
+    for (const contact of contacts) {
+        if (valorInput.toLowerCase() === contact.name.toLowerCase()) {
+            p.innerHTML = `Contato Encontrado Nome: ${contact.name} Tel: ${contact.number}`
 
             break
         } else {
